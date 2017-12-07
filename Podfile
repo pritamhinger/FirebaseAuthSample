@@ -6,5 +6,7 @@ target 'FirebaseLoginDemo' do
   use_frameworks!
 
   # Pods for FirebaseLoginDemo
-
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
 end
