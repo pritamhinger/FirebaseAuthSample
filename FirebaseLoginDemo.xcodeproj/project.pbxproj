@@ -23,6 +23,7 @@
 		48417AE41FD9AE21002FEAA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48417AE71FD9AE21002FEAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48417AE91FD9AE21002FEAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488E3D7C1FD9C39600C8D973 /* FirebaseLoginDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseLoginDemo.entitlements; sourceTree = "<group>"; };
 		73D166E9E5AD6EF4549E5C39 /* Pods-FirebaseLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginDemo/Pods-FirebaseLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6E17C52D64DCF901609DAF /* Pods-FirebaseLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginDemo/Pods-FirebaseLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D343B53C43EE4EB52C51EB6F /* Pods_FirebaseLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +70,7 @@
 		48417ADC1FD9AE21002FEAA6 /* FirebaseLoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				488E3D7C1FD9C39600C8D973 /* FirebaseLoginDemo.entitlements */,
 				48417ADD1FD9AE21002FEAA6 /* AppDelegate.swift */,
 				48417ADF1FD9AE21002FEAA6 /* ViewController.swift */,
 				48417AE11FD9AE21002FEAA6 /* Main.storyboard */,
@@ -124,6 +126,11 @@
 					48417AD91FD9AE21002FEAA6 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -362,6 +369,7 @@
 			baseConfigurationReference = 73D166E9E5AD6EF4549E5C39 /* Pods-FirebaseLoginDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseLoginDemo/FirebaseLoginDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QK5A5T3HGQ;
 				INFOPLIST_FILE = FirebaseLoginDemo/Info.plist;
@@ -378,6 +386,7 @@
 			baseConfigurationReference = CC6E17C52D64DCF901609DAF /* Pods-FirebaseLoginDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseLoginDemo/FirebaseLoginDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QK5A5T3HGQ;
 				INFOPLIST_FILE = FirebaseLoginDemo/Info.plist;
