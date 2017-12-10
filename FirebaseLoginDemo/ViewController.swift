@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
@@ -38,13 +39,27 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 return
             }
             
-            self.makeGraphRequest() 
+            self.makeGraphRequest()
         }
     }
     
     fileprivate func makeGraphRequest() {
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start{ (connection, result, error) in
+        let accessToken = FBSDKAccessToken.current()
+        guard let aceesTokenString = accessToken?.tokenString else {
+                return
+        }
+        
+        let credentials = FacebookAuthProvider.credential(withAccessToken: aceesTokenString)
+        
+        Auth.auth().signIn(with: credentials){ (user, error) in
+            if(error != nil){
+                print("Error login in to firebase using facebook token : ", error!)
+                return
+            }
             
+            print("Successful logged in into firebase",user ?? "")
+        }
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start{ (connection, result, error) in
             if(error != nil){
                 print("Failed to query user's field : ", error!)
                 return

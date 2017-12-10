@@ -12,6 +12,7 @@
 		48417AE31FD9AE21002FEAA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48417AE11FD9AE21002FEAA6 /* Main.storyboard */; };
 		48417AE51FD9AE21002FEAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48417AE41FD9AE21002FEAA6 /* Assets.xcassets */; };
 		48417AE81FD9AE21002FEAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48417AE61FD9AE21002FEAA6 /* LaunchScreen.storyboard */; };
+		48BC4E4E1FDC4F06000B3343 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48BC4E4D1FDC4F06000B3343 /* GoogleService-Info.plist */; };
 		658F88751A6C5C3BC3CB6B83 /* Pods_FirebaseLoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D343B53C43EE4EB52C51EB6F /* Pods_FirebaseLoginDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		48417AE71FD9AE21002FEAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48417AE91FD9AE21002FEAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488E3D7C1FD9C39600C8D973 /* FirebaseLoginDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseLoginDemo.entitlements; sourceTree = "<group>"; };
+		48BC4E4D1FDC4F06000B3343 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		73D166E9E5AD6EF4549E5C39 /* Pods-FirebaseLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginDemo/Pods-FirebaseLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6E17C52D64DCF901609DAF /* Pods-FirebaseLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginDemo/Pods-FirebaseLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D343B53C43EE4EB52C51EB6F /* Pods_FirebaseLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 		48417ADC1FD9AE21002FEAA6 /* FirebaseLoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				48BC4E4D1FDC4F06000B3343 /* GoogleService-Info.plist */,
 				488E3D7C1FD9C39600C8D973 /* FirebaseLoginDemo.entitlements */,
 				48417ADD1FD9AE21002FEAA6 /* AppDelegate.swift */,
 				48417ADF1FD9AE21002FEAA6 /* ViewController.swift */,
@@ -160,6 +163,7 @@
 				48417AE81FD9AE21002FEAA6 /* LaunchScreen.storyboard in Resources */,
 				48417AE51FD9AE21002FEAA6 /* Assets.xcassets in Resources */,
 				48417AE31FD9AE21002FEAA6 /* Main.storyboard in Resources */,
+				48BC4E4E1FDC4F06000B3343 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +196,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -199,6 +206,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
