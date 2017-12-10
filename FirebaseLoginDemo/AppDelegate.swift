@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configuring Google Client ID
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
+        // Configure Twitter App
+        Twitter.sharedInstance().start(withConsumerKey: "Tblz0gSP8FNG6TU5IWZGIHQ99", consumerSecret: "8Ae4IuTBF0jJZvBF9cRpVCb5zmfxbfwrwdheGCui6DdTYxQs2A")
         return true
     }
 
@@ -57,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: UIApplicationOpenURLOptionsKey.sourceApplication.rawValue, annotation: UIApplicationOpenURLOptionsKey.annotation.rawValue)
         
         GIDSignIn.sharedInstance().handle(url, sourceApplication: UIApplicationOpenURLOptionsKey.sourceApplication.rawValue, annotation: UIApplicationOpenURLOptionsKey.annotation.rawValue)
+        Twitter.sharedInstance().application(app, open: url, options: options)
         return handled
     }
 }

@@ -10,14 +10,57 @@ import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
 import GoogleSignIn
+import TwitterKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
 
+    fileprivate func setupTwitterLoginButton() {
+        let twitterButton = TWTRLogInButton{ (session, error) in
+            if let error = error {
+                print("Error while logging in with twitter", error)
+                return
+            }
+            
+            print("Successfully logged in with Twitter", session!)
+            guard let authToken = session?.authToken else{ return }
+            guard let authSecret = session?.authTokenSecret else { return }
+            
+            let credential = TwitterAuthProvider.credential(withToken: authToken, secret: authSecret)
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if let error = error{
+                    print("Error while authenticating user on Firebase using twitter", error)
+                    return
+                }
+                
+                print("User logged in into firebase", user!)
+                if let email = user?.email{
+                    print("Email address is ", email)
+                }
+                else{
+                    print("Email not available")
+                    Auth.auth().currentUser?.updateEmail(to: "testemail@test.com") { (emailError) in
+                        if let emailError = emailError{
+                            print("Error occured while updating emal",emailError)
+                            return
+                        }
+                        
+                        print("Email updated")
+                    }
+                }
+            })
+        }
+        
+        twitterButton.frame = CGRect(x: 16, y: 314, width: view.frame.width - 32, height: 50)
+        
+        view.addSubview(twitterButton)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupFacebookLoginButtons()
         setupGoogleLoginButton()
+        setupTwitterLoginButton()
     }
     
     fileprivate func setupFacebookLoginButtons() {

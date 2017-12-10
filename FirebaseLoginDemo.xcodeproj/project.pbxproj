@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4826C7CC1FDD8FCD00B323EB /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		48417ADA1FD9AE21002FEAA6 /* FirebaseLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48417ADD1FD9AE21002FEAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48417ADF1FD9AE21002FEAA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		2204FD5B2F4170B50E60F49A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4826C7CC1FDD8FCD00B323EB /* SafariServices.framework */,
 				D343B53C43EE4EB52C51EB6F /* Pods_FirebaseLoginDemo.framework */,
 			);
 			name = Frameworks;
@@ -178,6 +180,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseLoginDemo/Pods-FirebaseLoginDemo-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
