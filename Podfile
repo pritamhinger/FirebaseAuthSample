@@ -10,4 +10,5 @@ target 'FirebaseLoginDemo' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 end
